@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Sparkles, ArrowUpRight, Award, Globe2, Headphones, Clapperboard } from "lucide-react";
+import { Sparkles, ArrowUpRight, Award, Globe2, Headphones, Clapperboard, Camera, Video, Image, Palette, Plane } from "lucide-react";
 import { profile, tools, journey, socials } from "../data/mock";
 
 const getGradientColors = (gradient) => {
@@ -135,6 +135,52 @@ export default function About() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* SKILLS */}
+      <section className="section-pad max-w-[1400px] mx-auto px-5 md:px-10">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <div>
+            <div className="flex items-center gap-2 text-xs uppercase tracking-[0.35em] text-white/50">
+              <Sparkles size={14} className="text-[#FF6B1A]" /> Skills & Expertise
+            </div>
+            <h2 className="font-display text-5xl md:text-7xl mt-3 leading-none">
+              What I <span className="neon-text">bring to the table</span>.
+            </h2>
+          </div>
+          <p className="text-white/65 max-w-md leading-relaxed">
+            Beyond editing, I offer a complete suite of creative services to bring your vision to life.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { icon: Video, title: "Videography", desc: "Professional video production with cinematic storytelling", gradient: "from-[#FF2D95] to-[#FF1493]" },
+            { icon: Camera, title: "Photography", desc: "Stunning visual capture for events, products, and portraits", gradient: "from-[#FF6B1A] to-[#00D4FF]" },
+            { icon: Video, title: "Video Editing", desc: "Professional post-production with color grading and effects", gradient: "from-[#FF2D95] to-[#7C3AED]" },
+            { icon: Image, title: "Photo Editing", desc: "Retouching, color correction, and digital enhancement", gradient: "from-[#FF6B1A] to-[#10B981]" },
+            { icon: Palette, title: "Graphic Designing", desc: "Creative visual design for branding and marketing materials", gradient: "from-[#FF2D95] to-[#EC4899]" },
+            { icon: Plane, title: "Drone Services", desc: "Aerial photography and videography with certified pilot expertise", gradient: "from-[#FF6B1A] to-[#F59E0B]" },
+          ].map((skill, i) => (
+            <motion.div
+              key={skill.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="card-surface p-6 group hover:border-[#FF2D95]/40 transition-all"
+            >
+              <div className="flex items-start gap-4">
+                <div className={`p-3 rounded-lg bg-gradient-to-br ${skill.gradient}`}>
+                  <skill.icon size={20} className="text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-display text-xl font-semibold text-white mb-2">{skill.title}</h3>
+                  <p className="text-white/65 text-sm leading-relaxed">{skill.desc}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
