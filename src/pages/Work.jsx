@@ -12,7 +12,7 @@ export default function Work() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-50" />
         <div className="absolute inset-0 radial-glow" />
-        <div className="relative max-w-[1400px] mx-auto px-5 md:px-10 pt-20 md:pt-28 pb-10">
+        <div className="relative max-w-[1400px] mx-auto px-5 md:px-10 pt-20 md:pt-8 pb-10">
           <div className="text-xs uppercase tracking-[0.35em] text-white/50 flex items-center gap-2">
             <Clapperboard size={14} className="text-[#FF2D95]" /> Selected Projects
           </div>

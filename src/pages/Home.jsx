@@ -43,7 +43,7 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-60" />
         <div className="absolute inset-0 radial-glow" />
-        <div className="relative max-w-[1400px] mx-auto px-5 md:px-10 pt-20 md:pt-28 pb-20">
+        <div className="relative max-w-[1400px] mx-auto px-5 md:px-10 pt-12 md:pt-8 pb-20">
           <motion.div
             initial="hidden"
             animate="show"
@@ -275,13 +275,13 @@ export default function Home() {
               <a href={`https://wa.me/${profile.whatsappFull.replace(/\D/g,"")}`} target="_blank" rel="noreferrer" className="btn-ghost">WhatsApp Me</a>
             </div>
           </div>
-          <div className="relative mt-10 pt-8 border-t border-white/10 flex flex-wrap gap-4 text-xs uppercase tracking-[0.3em] text-white/45">
+          {/* <div className="relative mt-10 pt-8 border-t border-white/10 flex flex-wrap gap-4 text-xs uppercase tracking-[0.3em] text-white/45">
             {socials.map((s) => (
               <a key={s.handle} href={s.url} target="_blank" rel="noreferrer" className="hover:text-[#FF2D95] transition-colors flex items-center gap-2">
                 <Instagram size={12} /> {s.handle}
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
     </main>
