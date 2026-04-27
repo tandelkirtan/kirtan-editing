@@ -51,7 +51,7 @@ export default function About() {
       </section>
 
       {/* INTRO */}
-      <section className="max-w-[1400px] mx-auto px-5 md:px-10 grid md:grid-cols-12 gap-10 pb-16">
+      <section className="max-w-[1400px] mx-auto px-5 md:px-10 pt-10 md:pt-0 grid md:grid-cols-12 gap-10 pb-16">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}

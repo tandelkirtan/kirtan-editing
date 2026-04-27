@@ -49,9 +49,9 @@ export const services = [
     tag: "Public",
   },
   {
-    title: "Hospital & Product Shoots",
-    desc: "On-location shooting and post production for healthcare, e-commerce and lifestyle products \u2014 from raw footage to final cut.",
-    tag: "Studio",
+    title: "Event Shoots",
+    desc: "Capturing life's special moments - birthdays, baby showers, car/bike delivery videos and celebrations \u2014 beautifully edited to preserve your memories forever.",
+    tag: "Events",
   },
   {
     title: "Instagram Page Management",
