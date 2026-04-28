@@ -43,7 +43,7 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-60" />
         <div className="absolute inset-0 radial-glow" />
-        <div className="relative max-w-[1400px] mx-auto px-5 md:px-10 pt-12 md:pt-8 pb-20">
+        <div className="relative max-w-[1400px] mx-auto px-5 md:px-10 pt-4 md:pt-8 pb-20">
           <motion.div
             initial="hidden"
             animate="show"
@@ -63,9 +63,9 @@ export default function Home() {
             variants={fadeUp}
             className="font-display mt-6 text-[clamp(56px,11vw,180px)] leading-[0.9] tracking-tight"
           >
-            <span className="block">CUTTING</span>
-            <span className="block neon-text">FRAMES</span>
-            <span className="block">THAT MOVE <span className="italic font-light text-white/80">people.</span></span>
+            <span className="block">BUILDING</span>
+            <span className="block neon-text">CONTENT</span>
+            <span className="block">THAT CONNECTS <span className="italic font-light text-white/80">people.</span></span>
           </motion.h1>
 
           <motion.p
@@ -99,10 +99,10 @@ export default function Home() {
             className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4"
           >
             {[
-              { v: `${profile.experienceYears}+`, l: "Years Editing" },
+              { v: `${profile.experienceYears}+`, l: "Years Digital Experience" },
               { v: `${profile.projectsDelivered}+`, l: "Projects Delivered" },
               { v: `${profile.happyClients}+`, l: "Happy Clients" },
-              { v: `${profile.hoursEdited}+`, l: "Hours Edited" },
+              { v: `${profile.hoursEdited}+`, l: "Creative Hours" },
             ].map((s) => (
               <div key={s.l} className="card-surface p-5 md:p-6">
                 <div className="font-display text-4xl md:text-5xl neon-text">{s.v}</div>
@@ -138,9 +138,6 @@ export default function Home() {
               Services <span className="neon-text">crafted</span><br />for every story.
             </h2>
           </div>
-          <p className="text-white/65 max-w-md leading-relaxed">
-            Whether it&apos;s a wedding, a brand or a confidential government project — I bring the same obsession to every frame.
-          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((s, i) => {
@@ -262,26 +259,19 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-[1400px] mx-auto px-5 md:px-10 pb-24">
+      <section className="max-w-[1400px] mx-auto px-5 md:px-10">
         <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#160A26] via-[#0E1128] to-[#1A0E14] p-10 md:p-16">
           <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-[#FF2D95]/25 blur-3xl" />
           <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-[#FF6B1A]/20 blur-3xl" />
           <div className="relative grid md:grid-cols-2 gap-8 items-end">
             <h3 className="font-display text-5xl md:text-7xl leading-[0.95]">
-              Got footage? <br /> Let&apos;s make it <span className="neon-text">cinematic.</span>
+              Need content? <br /> Let&apos;s create something <span className="neon-text">memorable.</span>
             </h3>
             <div className="flex flex-wrap gap-3 md:justify-end">
               <Link to="/contact" className="btn-neon">Start a Project <ArrowUpRight size={16} /></Link>
-              <a href={`https://wa.me/${profile.whatsappFull.replace(/\D/g,"")}`} target="_blank" rel="noreferrer" className="btn-ghost">WhatsApp Me</a>
+              <a href={`https://wa.me/${profile.whatsappFull.replace(/\D/g,"")}`} target="_blank" rel="noreferrer" className="btn-ghost btn-ghost-whatsapp">WhatsApp Me</a>
             </div>
           </div>
-          {/* <div className="relative mt-10 pt-8 border-t border-white/10 flex flex-wrap gap-4 text-xs uppercase tracking-[0.3em] text-white/45">
-            {socials.map((s) => (
-              <a key={s.handle} href={s.url} target="_blank" rel="noreferrer" className="hover:text-[#FF2D95] transition-colors flex items-center gap-2">
-                <Instagram size={12} /> {s.handle}
-              </a>
-            ))}
-          </div> */}
         </div>
       </section>
     </main>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Sparkles, ArrowUpRight, Award, Globe2, Headphones, Clapperboard, Camera, Video, Image, Palette, Plane } from "lucide-react";
+import { Sparkles, ArrowUpRight, Award, Globe2, Headphones, Clapperboard, Camera, Video, Image, Palette, Plane, Instagram, Monitor, Package } from "lucide-react";
 import { profile, tools, journey, socials } from "../data/mock";
 
 const getGradientColors = (gradient) => {
@@ -29,7 +29,7 @@ export default function About() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-50" />
         <div className="absolute inset-0 radial-glow" />
-        <div className="relative max-w-[1400px] mx-auto px-5 md:px-10 pt-20 md:pt-8 pb-12">
+        <div className="relative max-w-[1400px] mx-auto px-5 md:px-10 pt-4 md:pt-8 pb-4">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -44,14 +44,14 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.05 }}
             className="font-display mt-4 text-[clamp(54px,10vw,160px)] leading-[0.9] tracking-tight"
           >
-            The editor <br />
+            The creator <br />
             <span className="neon-text">behind the cuts.</span>
           </motion.h1>
         </div>
       </section>
 
       {/* INTRO */}
-      <section className="max-w-[1400px] mx-auto px-5 md:px-10 pt-10 md:pt-0 grid md:grid-cols-12 gap-10 pb-16">
+      <section className="max-w-[1400px] mx-auto px-5 md:px-10 pt-6 md:pt-6 grid md:grid-cols-12 gap-10 pb-16">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -63,7 +63,7 @@ export default function About() {
             {profile.longIntro}
           </p>
           <p className="mt-6 text-white/65 leading-relaxed">
-            I take on projects across <span className="text-white">wedding videos, commercial content, government work and professional editing services</span>. I&apos;ve also worked on hospital shoots, product shoots and other professional projects — and I currently manage content for multiple Instagram pages, plus editing for both government and private commercial clients.
+            I take on projects across <span className="text-white">wedding films, commercial content, government projects, event shoots, Instagram management, graphic design, drone services, product shoots, and website development</span>. I currently manage content for multiple Instagram pages and serve both government and private commercial clients worldwide.
           </p>
           <p className="mt-6 text-white/65 leading-relaxed">
             Due to confidentiality and client policies, I&apos;m unable to publicly showcase a portion of this work — but I&apos;d be happy to walk you through similar projects on a call.
@@ -84,7 +84,7 @@ export default function About() {
           {[
             { icon: Award, label: "Experience", value: `${profile.experienceYears}+ years` },
             { icon: Clapperboard, label: "Projects", value: `${profile.projectsDelivered}+ delivered` },
-            { icon: Globe2, label: "Reach", value: "India + Foreign clients" },
+            { icon: Globe2, label: "Reach", value: "Global clients" },
             { icon: Headphones, label: "Mode", value: "Full-time freelance" },
           ].map((s, i) => (
             <div key={s.label} className={`card-surface p-6 ${i % 2 ? "translate-y-6" : ""}`}>
@@ -108,9 +108,6 @@ export default function About() {
                 My <span className="neon-text">arsenal</span>.
               </h2>
             </div>
-            <p className="text-white/65 max-w-md leading-relaxed">
-              From timeline cuts to final colour, I switch between the right tools for every job.
-            </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {tools.map((t, i) => (
@@ -123,12 +120,7 @@ export default function About() {
                 className="card-surface p-6 text-center group hover:border-[#FF2D95]/40 transition-all"
               >
                 <div 
-                  className="font-display font-black text-xl tracking-wide bg-clip-text text-transparent"
-                  style={{
-                    background: `linear-gradient(to right, ${getGradientColors(t.gradient)})`,
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent'
-                  }}
+                  className="font-grotesk font-bold text-xl tracking-wide text-white"
                 >
                   {t.name}
                 </div>
@@ -149,18 +141,18 @@ export default function About() {
               What I <span className="neon-text">bring to the table</span>.
             </h2>
           </div>
-          <p className="text-white/65 max-w-md leading-relaxed">
-            Beyond editing, I offer a complete suite of creative services to bring your vision to life.
-          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { icon: Video, title: "Videography", desc: "Professional video production with cinematic storytelling", gradient: "from-[#FF2D95] to-[#FF1493]" },
-            { icon: Camera, title: "Photography", desc: "Stunning visual capture for events, products, and portraits", gradient: "from-[#FF6B1A] to-[#00D4FF]" },
-            { icon: Video, title: "Video Editing", desc: "Professional post-production with color grading and effects", gradient: "from-[#FF2D95] to-[#7C3AED]" },
-            { icon: Image, title: "Photo Editing", desc: "Retouching, color correction, and digital enhancement", gradient: "from-[#FF6B1A] to-[#10B981]" },
-            { icon: Palette, title: "Graphic Designing", desc: "Creative visual design for branding and marketing materials", gradient: "from-[#FF2D95] to-[#EC4899]" },
-            { icon: Plane, title: "Drone Services", desc: "Aerial photography and videography with certified pilot expertise", gradient: "from-[#FF6B1A] to-[#F59E0B]" },
+            { icon: Video, title: "Wedding Films", desc: "Cinematic wedding edits, highlight reels and traditional ceremony films — colour graded, music synced, story driven.", gradient: "from-[#FF2D95] to-[#FF1493]" },
+            { icon: Camera, title: "Commercial Content", desc: "Brand reels, product launches and ad films designed to convert. Punchy cuts, bold typography, modern motion design.", gradient: "from-[#FF6B1A] to-[#00D4FF]" },
+            { icon: Clapperboard, title: "Government Projects", desc: "Awareness campaigns, event coverage and official documentaries handled with full confidentiality and on-time delivery.", gradient: "from-[#FF2D95] to-[#7C3AED]" },
+            { icon: Video, title: "Event Shoots", desc: "Capturing life's special moments - birthdays, baby showers, car/bike delivery videos and celebrations — beautifully edited to preserve your memories forever.", gradient: "from-[#FF6B1A] to-[#10B981]" },
+            { icon: Instagram, title: "Instagram Page Management", desc: "End-to-end content creation, scheduling and editing for multiple Instagram pages. Reels, posts, stories — done right.", gradient: "from-[#FF2D95] to-[#EC4899]" },
+            { icon: Palette, title: "Graphic Design", desc: "Posters, thumbnails, brand kits and motion graphics built in Photoshop, Lightroom and After Effects.", gradient: "from-[#FF6B1A] to-[#F59E0B]" },
+            { icon: Plane, title: "Drone Services", desc: "Aerial photography and videography with certified pilot expertise. Perfect for events, real estate, and cinematic shots.", gradient: "from-[#FF2D95] to-[#8B5CF6]" },
+            { icon: Package, title: "Product Shoots", desc: "Professional product photography and videography for e-commerce, brands, and marketing campaigns with studio-quality results.", gradient: "from-[#FF6B1A] to-[#EF4444]" },
+            { icon: Monitor, title: "Website Designing", desc: "Modern, responsive website design and development. Beautiful UI/UX that represents your brand and converts visitors.", gradient: "from-[#FF2D95] to-[#06B6D4]" },
           ].map((skill, i) => (
             <motion.div
               key={skill.title}
@@ -175,8 +167,8 @@ export default function About() {
                   <skill.icon size={20} className="text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-display text-xl font-semibold text-white mb-2">{skill.title}</h3>
-                  <p className="text-white/65 text-sm leading-relaxed">{skill.desc}</p>
+                  <h3 className="font-grotesk text-xl font-bold text-white mb-2">{skill.title}</h3>
+                  <p className="text-white/50 text-sm leading-relaxed">{skill.desc}</p>
                 </div>
               </div>
             </motion.div>
@@ -189,7 +181,7 @@ export default function About() {
         <div className="flex items-center gap-2 text-xs uppercase tracking-[0.35em] text-white/50 mb-3">
           <Award size={14} className="text-[#FF6B1A]" /> The Journey
         </div>
-        <h2 className="font-display text-5xl md:text-7xl leading-none">From hobby to <span className="neon-text">full-time craft.</span></h2>
+        <h2 className="font-display text-5xl md:text-7xl leading-none">From creator to <span className="neon-text">digital studio.</span></h2>
 
         <div className="mt-14 relative">
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#FF2D95] via-[#FF6B1A] to-transparent" />
@@ -220,14 +212,14 @@ export default function About() {
       </section>
 
       {/* VOLUNTEER WORK */}
-      <section className="max-w-[1400px] mx-auto px-5 md:px-10 pb-24">
-        <div className="card-surface p-8 md:p-12">
+      <section className="max-w-[1400px] mx-auto px-5 md:px-10">
+        <div className="card-surface p-8 md:p-6">
           <div className="flex items-center gap-2 text-xs uppercase tracking-[0.35em] text-white/50 mb-3">
             <Sparkles size={14} className="text-[#FF2D95]" /> Community Work
           </div>
           <h3 className="font-display text-4xl md:text-5xl leading-none">Beyond editing, I give back.</h3>
           <p className="mt-6 text-lg text-white/85 leading-relaxed">
-            I am also a videographer and an audio-visual volunteer at <a href="https://www.baps.org/home.aspx" target="_blank" rel="noreferrer" className="text-[#FF2D95] hover:text-[#FF6B1A] transition-colors">BAPS Swaminarayan Sanstha</a>, contributing to community projects and cultural events through visual storytelling.
+            I am also an audio-visual volunteer at <a href="https://www.baps.org/home.aspx" target="_blank" rel="noreferrer" className="text-[#ffff00] hover:text-[#FF6B1A] transition-colors">BAPS Swaminarayan Sanstha</a>, contributing to community projects and cultural events through my digital skills.
           </p>
         </div>
       </section>

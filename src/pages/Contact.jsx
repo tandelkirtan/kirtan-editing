@@ -70,7 +70,7 @@ export default function Contact() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-50" />
         <div className="absolute inset-0 radial-glow" />
-        <div className="relative max-w-[1400px] mx-auto px-5 md:px-10 pt-20 md:pt-8 pb-10">
+        <div className="relative max-w-[1400px] mx-auto px-5 md:px-10 pt-4 md:pt-8 pb-10">
           <div className="text-xs uppercase tracking-[0.35em] text-white/50 flex items-center gap-2">
             <span className="w-8 h-px bg-[#FF2D95]" /> Get In Touch
           </div>
@@ -81,18 +81,18 @@ export default function Contact() {
             className="font-display mt-4 text-[clamp(54px,10vw,160px)] leading-[0.9] tracking-tight"
           >
             Let&apos;s build <br />
-            something <span className="neon-text">cinematic.</span>
+            something <span className="neon-text">creative.</span>
           </motion.h1>
           <div className="mt-8 flex flex-wrap gap-4 text-white/65 text-sm">
             <span className="inline-flex items-center gap-2"><MapPin size={16} className="text-[#FF2D95]" /> {profile.location}</span>
-            <span className="inline-flex items-center gap-2"><Globe2 size={16} className="text-[#FF6B1A]" /> Working with foreign clients</span>
+            <span className="inline-flex items-center gap-2"><Globe2 size={16} className="text-[#FF6B1A]" /> Serving clients worldwide</span>
             <span className="inline-flex items-center gap-2"><Clock size={16} className="text-[#25D366]" /> Replies within a few hours</span>
           </div>
         </div>
       </section>
 
       {/* CARDS */}
-      <section className="max-w-[1400px] mx-auto px-5 md:px-10 mt-6 grid md:grid-cols-3 gap-5">
+      <section className="max-w-[1400px] mx-auto px-5 md:px-10 mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
         {cards.map((c, i) => {
           const Wrap = ({ children }) =>
             c.external ? (
@@ -109,22 +109,26 @@ export default function Contact() {
               transition={{ duration: 0.55, delay: i * 0.07 }}
               className="h-full"
             >
-              <div className={`relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br ${c.bg} p-7 h-full flex flex-col`}>
+              <div className={`relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br ${c.bg} p-4 md:p-7 h-full flex flex-col`}>
                 <div
                   className="absolute -top-16 -right-16 w-56 h-56 rounded-full blur-3xl opacity-30"
                   style={{ background: c.ringColor }}
                 />
                 <Wrap>
-                  <span
-                    className="w-14 h-14 rounded-2xl grid place-items-center text-white"
-                    style={{ background: c.ringColor, boxShadow: `0 10px 30px ${c.ringColor}55` }}
-                  >
-                    <c.Icon size={22} />
-                  </span>
-                  <div className="mt-6 text-xs uppercase tracking-[0.3em] text-white/45">{c.label}</div>
-                  <div className="mt-1 font-display text-3xl md:text-4xl tracking-wide break-all">{c.value}</div>
+                  <div className="flex items-center gap-3 md:gap-4">
+                    <span
+                      className="w-12 h-12 md:w-14 md:h-14 rounded-2xl grid place-items-center text-white flex-shrink-0"
+                      style={{ background: c.ringColor, boxShadow: `0 10px 30px ${c.ringColor}55` }}
+                    >
+                      <c.Icon size={18} className="md:size={22}" />
+                    </span>
+                    <div className="flex-1">
+                      <div className="text-xs uppercase tracking-[0.3em] text-white/45">{c.label}</div>
+                      <div className="mt-1 font-display text-xl md:text-2xl lg:text-3xl tracking-wide break-all">{c.value}</div>
+                    </div>
+                  </div>
                 </Wrap>
-                <div className="mt-auto pt-6 flex items-center justify-between">
+                <div className="mt-auto pt-4 md:pt-6 flex items-center justify-between">
                   <Wrap>
                     <span className="inline-flex items-center gap-2 font-grotesk font-semibold text-sm text-white/90 group">
                       {c.cta}
@@ -151,21 +155,27 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <div>
             <div className="text-xs uppercase tracking-[0.35em] text-white/50 mb-3">Why Work With Me</div>
-            <h2 className="font-display text-5xl md:text-6xl leading-none">Fast turnaround. <span className="neon-text">Cinematic finish.</span></h2>
+            <h2 className="font-display text-5xl md:text-6xl leading-none">Fast turnaround. <span className="neon-text">Digital excellence.</span></h2>
             <p className="mt-6 text-white/65 leading-relaxed max-w-xl">
-              I treat every project like it&apos;s going on the front page. Tight communication, clean delivery, multiple revisions, and zero compromise on quality.
+              I treat every project like it&apos;s going on the front page. Tight communication, clean delivery, multiple revisions, and zero compromise on quality across all creative services.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { t: "Quick replies", d: "Most messages answered within a few hours on WhatsApp." },
-              { t: "Clear pricing", d: "Transparent quotes — no surprises after the project starts." },
-              { t: "Multiple revisions", d: "We refine until you&apos;re genuinely happy with the cut." },
-              { t: "Confidentiality first", d: "NDAs welcome — your raw footage stays private." },
-            ].map((x) => (
-              <div key={x.t} className="card-surface p-5">
-                <div className="font-grotesk font-semibold">{x.t}</div>
-                <div className="mt-2 text-sm text-white/65 leading-relaxed" dangerouslySetInnerHTML={{ __html: x.d }} />
+              { t: "Quick replies", d: "Most messages answered within a few hours on WhatsApp.", icon: "⚡" },
+              { t: "Clear pricing", d: "Transparent quotes — no surprises after the project starts.", icon: "💰" },
+              { t: "Multiple revisions", d: "We refine until you&apos;re genuinely happy with the result.", icon: "🔄" },
+              { t: "Comprehensive services", d: "From wedding films to website development — all your creative needs in one place.", icon: "🎯" },
+            ].map((x, i) => (
+              <div key={x.t} className="card-surface p-5 group hover:border-[#FF2D95]/40 transition-all duration-300 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-[#FF2D95]/10 to-[#FF6B1A]/10 rounded-full -translate-y-8 translate-x-8 group-hover:scale-150 transition-transform duration-500"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-2xl">{x.icon}</span>
+                    <div className="font-grotesk font-semibold text-white">{x.t}</div>
+                  </div>
+                  <div className="text-sm text-white/65 leading-relaxed" dangerouslySetInnerHTML={{ __html: x.d }} />
+                </div>
               </div>
             ))}
           </div>
@@ -173,7 +183,7 @@ export default function Contact() {
       </section>
 
       {/* SOCIALS STRIP */}
-      <section className="max-w-[1400px] mx-auto px-5 md:px-10 pb-24">
+      <section className="max-w-[1400px] mx-auto px-5 md:px-10 pb-24 hidden md:block">
         <div className="card-surface p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-white/45">Also Find Me On</div>

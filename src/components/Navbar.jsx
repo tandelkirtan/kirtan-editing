@@ -43,7 +43,7 @@ export default function Navbar() {
           </div>
           <div className="hidden sm:block leading-tight">
             <div className="font-display text-xl tracking-wider">{profile.name}</div>
-            <div className="text-[10px] uppercase tracking-[0.25em] text-white/50">Video Editor</div>
+            <div className="text-[10px] uppercase tracking-[0.25em] text-white/50">Digital Creator</div>
           </div>
         </Link>
 

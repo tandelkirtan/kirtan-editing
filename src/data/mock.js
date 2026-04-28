@@ -1,14 +1,14 @@
-// Mock data for Kirtan Tandel - Video Editor Portfolio
+// Mock data for Kirtan Tandel - Digital Creator Portfolio
 
 export const profile = {
   name: "Kirtan Tandel",
   initials: "KT",
-  role: "Video Editor & Graphic Designer",
+  role: "Digital Creator",
   tagline: "I cut frames that move people.",
   intro:
-    "Full-time freelance video editor & graphic designer crafting cinematic stories for weddings, brands and government campaigns. I work with clients across India and abroad.",
+    "Full-time freelance digital creator crafting cinematic stories for weddings, brands and government campaigns. I work with clients across India and abroad.",
   longIntro:
-    "Hi, I'm Kirtan Tandel \u2014 a full-time Video Editor and Graphic Designer. For the last several years I have been crafting visuals that don't just look beautiful, they feel something. From intimate wedding films to high-energy commercial reels, from product shoots to government campaigns, every frame I cut carries a piece of the story it's trying to tell.",
+    "Hi, I'm Kirtan Tandel — a full-time Digital Creator. For the last several years I have been crafting visuals that don't just look beautiful, they feel something. From intimate wedding films to high-energy commercial reels, from product shoots to government campaigns, every frame I cut carries a piece of the story it's trying to tell.",
   location: "Freelancing Worldwide",
   availability: "Available for new projects",
   whatsapp: "9664546853",
@@ -17,7 +17,7 @@ export const profile = {
   phone: "+91 96645 46853",
   experienceYears: 5,
   projectsDelivered: 180,
-  happyClients: 60,
+  happyClients: 60, 
   hoursEdited: 4200,
 };
 
@@ -63,6 +63,21 @@ export const services = [
     desc: "Posters, thumbnails, brand kits and motion graphics built in Photoshop, Lightroom and After Effects.",
     tag: "Visual",
   },
+  {
+    title: "Drone Services",
+    desc: "Aerial photography and videography with certified pilot expertise. Perfect for events, real estate, and cinematic shots.",
+    tag: "Aerial",
+  },
+  {
+    title: "Product Shoots",
+    desc: "Professional product photography and videography for e-commerce, brands, and marketing campaigns with studio-quality results.",
+    tag: "Studio",
+  },
+  {
+    title: "Website Designing",
+    desc: "Modern, responsive website design and development. Beautiful UI/UX that represents your brand and converts visitors.",
+    tag: "Digital",
+  },
 ];
 
 export const tools = [
@@ -81,106 +96,56 @@ export const tools = [
 ];
 
 export const journey = [
-  { year: "2020", title: "Started Editing", desc: "During my colledge time, Picked up Capcut Pro and started cutting wedding highlights for local studios." },
-  { year: "2021", title: "First Brand", desc: "Began handling commercial content and instagram pages" },
-  { year: "2022", title: "Government Projects", desc: "Onboarded for confidential government awareness and event coverage edits." },
-  { year: "2023", title: "Going Full-Time", desc: "Left part-time work and went all-in on freelancing as a full time editor." },
-  { year: "2024", title: "International Clients", desc: "Started shipping projects for foreign clients across multiple time-zones." },
-  { year: "2025", title: "Studio Mode", desc: "Running parallel pipelines: weddings edits, brands edits, comerial edits." },
+  { year: "2020", title: "Started Creating", desc: "During college time, picked up video editing and started creating wedding highlights for local studios." },
+  { year: "2021", title: "First Brand", desc: "Began handling commercial content and Instagram page management for growing businesses." },
+  { year: "2022", title: "Government Projects", desc: "Onboarded for confidential government awareness campaigns and event coverage." },
+  { year: "2023", title: "Going Full-Time", desc: "Left part-time work and went all-in on freelancing as a full-time Digital Creator." },
+  { year: "2024", title: "Global Expansion", desc: "Started serving international clients and expanded services to include drone operations and graphic design." },
+  { year: "2025", title: "Digital Creator Studio", desc: "Running comprehensive creative services: wedding films, commercial content, drone services, graphic design, and website development." },
 ];
 
-export const categories = ["All", "Wedding", "Commercial", "Government", "Product", "Reels", "Hospital"];
+export const categories = ["All", "Wedding", "Graphic Design", "Events", "Product Shoot", "Drone Service", "Website Design", "Commercial", "Branding"];
 
 export const projects = [
   {
     id: 1,
-    title: "The Vow \u2014 Wedding Highlight",
     category: "Wedding",
-    client: "Dimeera Photography",
-    desc: "A 90-second cinematic highlight cut from 6 hours of footage. Warm tones, slow pulls, story-led pacing.",
-    src: "https://assets.mixkit.co/videos/4434/4434-720.mp4",
-    poster: "https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80&auto=format&fit=crop",
-    link: "https://www.instagram.com/dimeeraphotography",
+    poster: "https://lh3.googleusercontent.com/d/1Jjp7otTXZcYfePMJbTgzxV6XfqQ2sI7w=w800-h600",
   },
   {
     id: 2,
-    title: "Varni Exim \u2014 Brand Reel",
-    category: "Commercial",
-    client: "Varni Exim Institute",
-    desc: "High-energy commercial reel with kinetic typography, bold transitions and brand-led colour grade.",
-    src: "https://assets.mixkit.co/videos/50220/50220-720.mp4",
-    poster: "https://images.unsplash.com/photo-1558403194-611308249627?w=1200&q=80&auto=format&fit=crop",
-    link: "https://www.instagram.com/varni_exim_institute",
+    category: "Graphic Design",
+    poster: "https://lh3.googleusercontent.com/d/15vwDb76tZCMWyt3TYts41HdMV7qNPl5L=w800-h600",
   },
   {
     id: 3,
-    title: "Artist Editing \u2014 Reel Pack",
-    category: "Reels",
-    client: "Artist Editing",
-    desc: "Pack of fast-cut Instagram reels showcasing colour, motion and rhythm-based editing techniques.",
-    src: "https://assets.mixkit.co/videos/41487/41487-720.mp4",
-    poster: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&q=80&auto=format&fit=crop",
-    link: "https://www.instagram.com/artist_editing",
+    category: "Events",
+    poster: "https://lh3.googleusercontent.com/d/1FXqI8fRvIiKihEBL2cuzpNqyKz4ClbAR=w800-h600",
   },
   {
     id: 4,
-    title: "Confidential Govt. Campaign",
-    category: "Government",
-    client: "Govt. Project (NDA)",
-    desc: "Awareness campaign edited under confidentiality. Tight timelines, multi-cam handling, official deliverables.",
-    src: "https://assets.mixkit.co/videos/4436/4436-720.mp4",
-    poster: "https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?w=1200&q=80&auto=format&fit=crop",
-    link: "#",
+    category: "Product Shoot",
+    poster: "https://lh3.googleusercontent.com/d/1g6Y--WQ7CWDy-K2Z9j0wAq9d0RiyCSFE=w800-h600",
   },
   {
     id: 5,
-    title: "Product Shoot \u2014 Studio Cut",
-    category: "Product",
-    client: "E-commerce Client",
-    desc: "Studio shot product film with macro details, clean edits, brand-style motion graphics and call-outs.",
-    src: "https://assets.mixkit.co/videos/39767/39767-720.mp4",
-    poster: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1200&q=80&auto=format&fit=crop",
-    link: "#",
+    category: "Drone Service",
+    poster: "https://lh3.googleusercontent.com/d/1rkyqR_5dmvZzpll9jN39FnfwNYNTtZxB=w800-h600",
   },
   {
     id: 6,
-    title: "Hospital Brand Film",
-    category: "Hospital",
-    client: "Healthcare Client",
-    desc: "Sensitive, calm, well-paced hospital film. Subtle colour, careful sound design, real-life human touch.",
-    src: "https://assets.mixkit.co/videos/49563/49563-720.mp4",
-    poster: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=1200&q=80&auto=format&fit=crop",
-    link: "#",
+    category: "Website Design",
+    poster: "https://lh3.googleusercontent.com/d/1dgSZ-fXE6SrHw7yPMfUPa7l14FrwBNIz=w800-h600",
   },
   {
     id: 7,
-    title: "Save The Date \u2014 Pre Wedding",
-    category: "Wedding",
-    client: "Private Client",
-    desc: "Romantic pre-wedding reveal cut with travel B-roll, stylised typography and a music-led structure.",
-    src: "https://assets.mixkit.co/videos/42481/42481-720.mp4",
-    poster: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200&q=80&auto=format&fit=crop",
-    link: "#",
+    category: "Commercial",
+    poster: "https://lh3.googleusercontent.com/d/1NVcgsoNO417QEZRYFxDZT5yes2_8LHOJ=w800-h600",
   },
   {
     id: 8,
-    title: "Festival Promo \u2014 City Event",
-    category: "Commercial",
-    client: "Event Brand",
-    desc: "Festival promo reel with crowd shots, light leaks, beat-matched cuts and a punchy 30 second runtime.",
-    src: "https://assets.mixkit.co/videos/3201/3201-720.mp4",
-    poster: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&q=80&auto=format&fit=crop",
-    link: "#",
-  },
-  {
-    id: 9,
-    title: "Lifestyle Reel \u2014 IG Page",
-    category: "Reels",
-    client: "Managed Page",
-    desc: "Series of lifestyle reels for an Instagram page I manage end-to-end \u2014 from concept to caption.",
-    src: "https://assets.mixkit.co/videos/51570/51570-720.mp4",
-    poster: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&q=80&auto=format&fit=crop",
-    link: "#",
+    category: "Branding",
+    poster: "https://lh3.googleusercontent.com/d/12mB6NQjBlEJuex8Ywhzhfa0qYyAQK7dN=w800-h600",
   },
 ];
 

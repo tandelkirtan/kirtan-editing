@@ -53,6 +53,16 @@
   background: rgba(255,45,149,0.08);
 }
 
+.btn-ghost-whatsapp {
+  border-color: #25D366;
+}
+
+.btn-ghost-whatsapp:hover {
+  border-color: #25D366;
+  color: #25D366;
+  background: rgba(37,211,102,0.08);
+}
+
 .card-surface {
   background: linear-gradient(180deg, rgba(22,26,51,0.85), rgba(14,17,40,0.85));
   border: 1px solid rgba(255,255,255,0.06);
@@ -82,8 +92,8 @@
 .video-card:hover video { transform: scale(1.04); }
 
 .section-pad {
-  padding-top: clamp(64px, 10vw, 128px);
-  padding-bottom: clamp(64px, 10vw, 128px);
+  padding-top: clamp(40px, 10vw, 20px);
+  padding-bottom: clamp(40px, 10vw, 40px);
 }
 
 .shimmer-divider {

@@ -12,7 +12,7 @@ export default function Work() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-50" />
         <div className="absolute inset-0 radial-glow" />
-        <div className="relative max-w-[1400px] mx-auto px-5 md:px-10 pt-20 md:pt-8 pb-10">
+        <div className="relative max-w-[1400px] mx-auto px-5 md:px-10 pt-4 md:pt-8 pb-4">
           <div className="text-xs uppercase tracking-[0.35em] text-white/50 flex items-center gap-2">
             <Clapperboard size={14} className="text-[#FF2D95]" /> Selected Projects
           </div>
@@ -35,7 +35,7 @@ export default function Work() {
       <section className="max-w-[1400px] mx-auto px-5 md:px-10 mt-10 pb-24">
         <motion.div
             layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
           >
             {projects.map((p, i) => (
               <VideoCard key={p.id} project={p} index={i} />
@@ -44,7 +44,7 @@ export default function Work() {
       </section>
 
       {/* DISCLOSURE / NDA */}
-      <section className="max-w-[1400px] mx-auto px-5 md:px-10 pb-24">
+      <section className="max-w-[1400px] mx-auto px-5 md:px-10">
         <div className="card-surface p-8 md:p-12">
           <div className="flex items-center gap-2 text-xs uppercase tracking-[0.35em] text-white/50 mb-3">
             <Clapperboard size={14} className="text-[#FF6B1A]" /> A Note On Confidentiality
@@ -57,14 +57,18 @@ export default function Work() {
           </p>
           <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {socials.map((s) => (
-              <a key={s.handle} href={s.url} target="_blank" rel="noreferrer" className="group card-surface p-5 hover:border-[#FF2D95]/40 transition-colors block">
+              <a key={s.handle} href={s.url} target="_blank" rel="noreferrer" className="group card-surface p-5 hover:border-[#FF2D95]/40 transition-colors block md:p-5">
                 <div className="flex items-center justify-between">
-                  <div className="font-grotesk font-semibold flex items-center gap-2"><Instagram size={16} /> {s.label}</div>
+                  <div className="font-grotesk font-semibold flex items-center gap-2 hidden md:flex"><Instagram size={16} /> {s.label}</div>
+                  <div className="font-grotesk font-semibold text-sm md:hidden">{s.label}</div>
                   <ArrowUpRight size={18} className="text-white/40 group-hover:text-[#FF2D95] group-hover:rotate-12 transition-all" />
                 </div>
-                <div className="mt-2 text-sm text-white/55">{s.handle}</div>
+                <div className="mt-2 text-sm text-white/55 hidden md:block">{s.handle}</div>
               </a>
             ))}
+          </div>
+          <div className="mt-6 text-center">
+            <p className="text-white/50 text-sm italic">and many more...</p>
           </div>
         </div>
       </section>
